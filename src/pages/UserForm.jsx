@@ -2,17 +2,19 @@ import { useState } from "react";
 import InputBox from "../components/input-box/input-box";
 import SolidButton from "../components/solid-button/solid-button";
 
-function UserForm() {
+function UserForm({ onUserSubmit }) {
   const [userName, setUserName] = useState("");
   const [userRole, setUserRole] = useState("");
   const [userCity, setUserCity] = useState("");
 
-  function submitUserForm() {
+  function submitUserForm(event) {
     event.preventDefault();
 
-    console.log(userName);
-    console.log(userRole);
-    console.log(userCity);
+    onUserSubmit({
+      userName,
+      userRole,
+      userCity,
+    });
   }
 
   return (
