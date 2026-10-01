@@ -1,13 +1,9 @@
-import SolidButton from "./components/solid-button";
+import UserPage from "./pages/UserPage";
 
 function App() {
-  function handleMessage() {
-    console.log("Clicked");
-  }
-
   return (
     <>
-      <SolidButton onShow={handleMessage}></SolidButton>
+      <UserPage></UserPage>
     </>
   );
 }

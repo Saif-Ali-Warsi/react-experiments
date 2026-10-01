@@ -1,0 +1,22 @@
+import "../input-box/input-box.css";
+
+function InputBox({
+  value,
+  onChange,
+  type = "text",
+  placeholder = "Enter Information",
+}) {
+  return (
+    <>
+      <input
+        type={type}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        className="input-box"
+      ></input>
+    </>
+  );
+}
+
+export default InputBox;
