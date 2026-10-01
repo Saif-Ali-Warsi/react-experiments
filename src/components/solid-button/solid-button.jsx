@@ -1,9 +1,13 @@
-import "../../components/solid-button/solid-button.css"
+import "../../components/solid-button/solid-button.css";
 
-function SolidButton({onShow}) {
+function SolidButton({ onShow, type, text }) {
   return (
     <>
-      <button className="custom-btn btn-1" onClick={onShow}>Submit</button>
+      <div className="custom-btn-container">
+        <button className="custom-btn btn-1" type={type} onClick={onShow}>
+          {text}
+        </button>
+      </div>
     </>
   );
 }

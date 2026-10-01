@@ -2,3 +2,15 @@ body {
   color: white;
   background-color: black;
 }
+
+.main-container {
+  display: flex;
+}
+
+.left-section {
+  width: 50%;
+}
+
+.right-section {
+  width: 50%;
+}

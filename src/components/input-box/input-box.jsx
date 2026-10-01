@@ -8,13 +8,15 @@ function InputBox({
 }) {
   return (
     <>
-      <input
-        type={type}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        className="input-box"
-      ></input>
+      <div className="input-box-container">
+        <input
+          type={type}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+          className="input-box"
+        ></input>
+      </div>
     </>
   );
 }

@@ -1,3 +1,7 @@
+.custom-btn-container {
+  margin: 0 0 20px;
+}
+
 /* Base Button Styles */
 .custom-btn {
   width: 130px;
@@ -5,29 +9,37 @@
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
-              7px 7px 20px 0px rgba(0,0,0,.1),
-              4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow:
+    inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
-  margin: 20px;
 }
 
 /* Button 1 */
 .btn-1 {
-  background: rgb(6,14,131);
-  background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+  background: rgb(6, 14, 131);
+  background: linear-gradient(
+    0deg,
+    rgba(6, 14, 131, 1) 0%,
+    rgba(12, 25, 180, 1) 100%
+  );
   border: none;
 }
 .btn-1:hover {
-  background: rgb(0,3,255);
-  background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+  background: rgb(0, 3, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 3, 255, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
 }
 
 /* Button 4 */
@@ -54,19 +66,20 @@
   content: "";
   right: 0;
   top: 0;
-  box-shadow: 4px 4px 6px 0 rgba(255,255,255,.9),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-              inset -4px -4px 6px 0 rgba(255,255,255,.9),
-              inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  box-shadow:
+    4px 4px 6px 0 rgba(255, 255, 255, 0.9),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.9),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
   transition: all 0.3s ease;
 }
 .btn-4:before {
   height: 0%;
-  width: .1px;
+  width: 0.1px;
 }
 .btn-4:after {
   width: 0%;
-  height: .1px;
+  height: 0.1px;
 }
 .btn-4:hover:before {
   height: 100%;
@@ -80,19 +93,20 @@
   content: "";
   left: 0;
   bottom: 0;
-  box-shadow: 4px 4px 6px 0 rgba(255,255,255,.9),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-              inset -4px -4px 6px 0 rgba(255,255,255,.9),
-              inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  box-shadow:
+    4px 4px 6px 0 rgba(255, 255, 255, 0.9),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.9),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
   transition: all 0.3s ease;
 }
 .btn-4 span:before {
-  width: .1px;
+  width: 0.1px;
   height: 0%;
 }
 .btn-4 span:after {
   width: 0%;
-  height: .1px;
+  height: 0.1px;
 }
 .btn-4 span:hover:before {
   height: 100%;
@@ -103,8 +117,12 @@
 
 /* Button 6 */
 .btn-6 {
-  background: rgb(247,150,192);
-  background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+  background: rgb(247, 150, 192);
+  background: radial-gradient(
+    circle,
+    rgba(247, 150, 192, 1) 0%,
+    rgba(118, 174, 241, 1) 100%
+  );
   line-height: 42px;
   padding: 0;
   border: none;
@@ -121,10 +139,11 @@
   content: "";
   height: 0%;
   width: 1px;
-  box-shadow: -1px -1px 20px 0px rgba(255,255,255,1),
-              -4px -4px 5px 0px rgba(255,255,255,1),
-              7px 7px 20px 0px rgba(0,0,0,.4),
-              4px 4px 5px 0px rgba(0,0,0,.3);
+  box-shadow:
+    -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.4),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.3);
 }
 .btn-6:before {
   right: 0;
@@ -153,23 +172,24 @@
 .btn-6 span:after {
   position: absolute;
   content: "";
-  box-shadow: -1px -1px 20px 0px rgba(255,255,255,1),
-              -4px -4px 5px 0px rgba(255,255,255,1),
-              7px 7px 20px 0px rgba(0,0,0,.4),
-              4px 4px 5px 0px rgba(0,0,0,.3);
+  box-shadow:
+    -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.4),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.3);
 }
 .btn-6 span:before {
   left: 0;
   top: 0;
   width: 0%;
-  height: .5px;
+  height: 0.5px;
   transition: all 500ms ease;
 }
 .btn-6 span:after {
   right: 0;
   bottom: 0;
   width: 0%;
-  height: .5px;
+  height: 0.5px;
   transition: all 500ms ease;
 }
 .btn-6 span:hover:before {
