@@ -1,7 +1,13 @@
+import SolidButton from "./components/solid-button";
+
 function App() {
+  function handleMessage() {
+    console.log("Clicked");
+  }
+
   return (
     <>
-      <h1>Hello</h1>
+      <SolidButton onShow={handleMessage}></SolidButton>
     </>
   );
 }
