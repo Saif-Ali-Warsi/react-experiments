@@ -1,0 +1,165 @@
+import UserCard from "../components/user-card/UserCard";
+
+function UserList({user}) {
+  const users = [
+    {
+      id: 1,
+      name: "Ethan Smith",
+      gender: "Male",
+      role: "Software Engineer",
+      age: 28,
+      city: "New York",
+      mobile: "+1-212-555-0143",
+      email: "ethan.smith@example.com",
+      blood_group: "B+",
+    },
+    {
+      id: 2,
+      name: "Olivia Johnson",
+      gender: "Female",
+      role: "Product Manager",
+      age: 32,
+      city: "San Francisco",
+      mobile: "+1-415-555-0198",
+      email: "olivia.johnson@example.com",
+      blood_group: "O+",
+    },
+    {
+      id: 3,
+      name: "Noah Williams",
+      gender: "Male",
+      role: "UX Designer",
+      age: 26,
+      city: "Austin",
+      mobile: "+1-512-555-0176",
+      email: "noah.williams@example.com",
+      blood_group: "A+",
+    },
+    {
+      id: 4,
+      name: "Emma Brown",
+      gender: "Female",
+      role: "Data Scientist",
+      age: 29,
+      city: "Seattle",
+      mobile: "+1-206-555-0121",
+      email: "emma.brown@example.com",
+      blood_group: "AB+",
+    },
+    {
+      id: 5,
+      name: "Liam Jones",
+      gender: "Male",
+      role: "DevOps Engineer",
+      age: 35,
+      city: "Chicago",
+      mobile: "+1-312-555-0189",
+      email: "liam.jones@example.com",
+      blood_group: "O-",
+    },
+    {
+      id: 6,
+      name: "Sophia Garcia",
+      gender: "Female",
+      role: "HR Manager",
+      age: 31,
+      city: "Los Angeles",
+      mobile: "+1-213-555-0154",
+      email: "sophia.garcia@example.com",
+      blood_group: "B-",
+    },
+    {
+      id: 7,
+      name: "Mason Miller",
+      gender: "Male",
+      role: "Frontend Developer",
+      age: 25,
+      city: "Denver",
+      mobile: "+1-303-555-0132",
+      email: "mason.miller@example.com",
+      blood_group: "A-",
+    },
+    {
+      id: 8,
+      name: "Ava Davis",
+      gender: "Female",
+      role: "Quality Assurance",
+      age: 27,
+      city: "Boston",
+      mobile: "+1-617-555-0167",
+      email: "ava.davis@example.com",
+      blood_group: "AB-",
+    },
+    {
+      id: 9,
+      name: "Lucas Rodriguez",
+      gender: "Male",
+      role: "Backend Developer",
+      age: 30,
+      city: "Atlanta",
+      mobile: "+1-404-555-0115",
+      email: "lucas.rodriguez@example.com",
+      blood_group: "O+",
+    },
+    {
+      id: 10,
+      name: "Isabella Martinez",
+      gender: "Female",
+      role: "Marketing Specialist",
+      age: 28,
+      city: "Miami",
+      mobile: "+1-305-555-0190",
+      email: "isabella.martinez@example.com",
+      blood_group: "B+",
+    },
+  ];
+
+  return (
+    <>
+      <div className="d-flex gap-20">
+        <div>
+          <h1>All Users List</h1>
+          <div className="user-panel">
+            {users.map((user) => (
+              <p key={user.id}>{user.name}</p>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h1>Users Age Below 28</h1>
+          <div className="user-panel">
+            {users
+              .filter((user) => user.age <= 28)
+              .map((user) => (
+                <p key={user.id}>{user.name}</p>
+              ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="d-flex gap-20">
+        <div>
+          <h1>All Male Users List</h1>
+
+          {users
+            .filter((user) => user.gender === "Male")
+            .map((user) => (
+              <UserCard key={user.id} user={user}></UserCard>
+            ))}
+        </div>
+        <div>
+          <h1>All Female Users List</h1>
+
+          {users
+            .filter((user) => user.gender === "Female")
+            .map((user) => (
+              <p key={user.id}>{user.name}</p>
+            ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default UserList;
