@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InputBox from "../components/input-box/input-box";
 import SolidButton from "../components/solid-button/solid-button";
+import SelectBox from "../components/select/Select-box";
 
 function UserForm({ onUserSubmit }) {
   const [userName, setUserName] = useState("");
@@ -28,12 +29,10 @@ function UserForm({ onUserSubmit }) {
           onChange={(event) => setUserName(event.target.value)}
         ></InputBox>
 
-        <InputBox
-          type="text"
-          placeholder="Enter User Role"
+        <SelectBox
           value={userRole}
           onChange={(event) => setUserRole(event.target.value)}
-        ></InputBox>
+        ></SelectBox>
 
         <InputBox
           type="text"

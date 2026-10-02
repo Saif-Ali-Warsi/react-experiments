@@ -1,4 +1,5 @@
 function UserPage({ user }) {
+  
   return (
     <div>
       <h2>User Page</h2>

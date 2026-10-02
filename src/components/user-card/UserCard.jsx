@@ -1,4 +1,5 @@
 function UserCard({ user }) {
+
   return (
     <>
       <p>{user.name}</p>
