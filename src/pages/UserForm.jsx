@@ -12,15 +12,41 @@ function UserForm({ onUserSubmit }) {
     isActive: false,
   });
 
+  const [errors, setErrors] = useState({});
+
   function submitUserForm(event) {
     event.preventDefault();
 
-    onUserSubmit({
-      userName: formData.userName,
-      userRole: formData.userRole,
-      userCity: formData.userCity,
-      isActive: formData.isActive,
+    const newErrors = {};
+
+    if (!formData.userName.trim()) {
+      newErrors.userName = "User Name is required";
+    }
+
+    if (!formData.userRole) {
+      newErrors.userRole = "User Role is Required";
+    }
+
+    if (!formData.userCity.trim()) {
+      newErrors.userCity = "User City is Required";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
+
+    onUserSubmit(formData);
+
+    setFormData({
+      userName: "",
+      userRole: "",
+      userCity: "",
+      isActive: false,
     });
+
+    setErrors({});
   }
 
   return (
@@ -35,33 +61,45 @@ function UserForm({ onUserSubmit }) {
           }
         ></CheckBox>
 
-        <InputBox
-          type="text"
-          placeholder="Enter User Name"
-          value={formData.userName}
-          onChange={(event) =>
-            setFormData({
-              ...formData,
-              userName: event.target.value,
-            })
-          }
-        ></InputBox>
+        <div>
+          <InputBox
+            type="text"
+            placeholder="Enter User Name"
+            value={formData.userName}
+            onChange={(event) =>
+              setFormData({
+                ...formData,
+                userName: event.target.value,
+              })
+            }
+          ></InputBox>
 
-        <SelectBox
-          value={formData.userRole}
-          onChange={(event) =>
-            setFormData({ ...formData, userRole: event.target.value })
-          }
-        ></SelectBox>
+          {errors.userName && <p>{errors.userName}</p>}
+        </div>
 
-        <InputBox
-          type="text"
-          placeholder="Enter User City"
-          value={formData.userCity}
-          onChange={(event) =>
-            setFormData({ ...formData, userCity: event.target.value })
-          }
-        ></InputBox>
+        <div>
+          <SelectBox
+            value={formData.userRole}
+            onChange={(event) =>
+              setFormData({ ...formData, userRole: event.target.value })
+            }
+          ></SelectBox>
+
+          {errors.userRole && <p>{errors.userRole}</p>}
+        </div>
+
+        <div>
+          <InputBox
+            type="text"
+            placeholder="Enter User City"
+            value={formData.userCity}
+            onChange={(event) =>
+              setFormData({ ...formData, userCity: event.target.value })
+            }
+          ></InputBox>
+
+          {errors.userCity && <p>{errors.userCity}</p>}
+        </div>
 
         <SolidButton type="submit" text="SUBMIT"></SolidButton>
       </form>
