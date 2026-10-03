@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import InputBox from "../components/input-box/input-box";
 import SolidButton from "../components/solid-button/solid-button";
 import SelectBox from "../components/select/Select-box";
@@ -11,6 +11,8 @@ function UserForm({ onUserSubmit }) {
     userCity: "",
     isActive: false,
   });
+
+  const inputRef = useRef(null);
 
   const [errors, setErrors] = useState({});
 
@@ -49,6 +51,10 @@ function UserForm({ onUserSubmit }) {
     setErrors({});
   }
 
+  function focusInput() {
+    inputRef.current.focus();
+  }
+
   return (
     <>
       <h1>User Form</h1>
@@ -66,6 +72,7 @@ function UserForm({ onUserSubmit }) {
             type="text"
             placeholder="Enter User Name"
             value={formData.userName}
+            inputRef={inputRef}
             onChange={(event) =>
               setFormData({
                 ...formData,
@@ -103,6 +110,13 @@ function UserForm({ onUserSubmit }) {
 
         <SolidButton type="submit" text="SUBMIT"></SolidButton>
       </form>
+      <input ref={inputRef}></input>
+
+      <SolidButton
+        onClick={focusInput}
+        type="button"
+        text="Focus User Field"
+      ></SolidButton>
     </>
   );
 }

@@ -1,10 +1,10 @@
 import "../../components/solid-button/solid-button.css";
 
-function SolidButton({ onShow, type, text }) {
+function SolidButton({ onClick, button, text }) {
   return (
     <>
       <div className="custom-btn-container">
-        <button className="custom-btn btn-1" type={type} onClick={onShow}>
+        <button className="custom-btn btn-1" type={button} onClick={onClick}>
           {text}
         </button>
       </div>
