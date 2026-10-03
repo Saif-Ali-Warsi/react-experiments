@@ -2,6 +2,7 @@ import { useState } from "react";
 import UserPage from "./pages/UserPage";
 import UserForm from "./pages/UserForm";
 import UserList from "./pages/UserList";
+import ServerUsers from "./pages/ServerUsers";
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -12,6 +13,7 @@ function App() {
         <div className="left-section">
           <UserForm onUserSubmit={setUserData}></UserForm>
 
+          <ServerUsers></ServerUsers>
           <UserList></UserList>
         </div>
 
