@@ -4,25 +4,33 @@ import UserForm from "./pages/UserForm";
 import UserList from "./pages/UserList";
 import ServerUsers from "./pages/ServerUsers";
 import ProductList from "./pages/ProductList";
+import { MsgContext } from "./contexts/MsgContext";
+
 
 function App() {
   const [userData, setUserData] = useState(null);
+
+  const ImpMsg = {
+    title: "React Experiments from context",
+  };
 
   return (
     <>
       <div className="d-flex">
         <div className="left-section">
-          <ProductList></ProductList>
+          <MsgContext.Provider value={ImpMsg}>
+            <ProductList />
+          </MsgContext.Provider>
 
-          <UserForm onUserSubmit={setUserData}></UserForm>
+          <UserForm onUserSubmit={setUserData} />
 
-          <ServerUsers></ServerUsers>
+          <ServerUsers />
 
-          <UserList></UserList>
+          <UserList />
         </div>
 
         <div className="right-section">
-          <UserPage user={userData}></UserPage>
+          <UserPage user={userData} />
         </div>
       </div>
     </>

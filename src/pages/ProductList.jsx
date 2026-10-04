@@ -1,5 +1,7 @@
 import { useMemo, useState } from "react";
 import InputBox from "../components/input-box/input-box";
+import { useContext } from "react";
+import { MsgContext } from "../contexts/MsgContext";
 
 function ProductList() {
   const [products] = useState([
@@ -8,7 +10,11 @@ function ProductList() {
     { id: 3, name: "Tablet", price: 30000 },
   ]);
 
+  
+
   const [search, setSearch] = useState("");
+
+  const msg = useContext(MsgContext);
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) =>
@@ -18,6 +24,7 @@ function ProductList() {
 
   return (
     <>
+      {msg?.title}
       <h4>Search implementation using useMemo Hook</h4>
       <InputBox
         value={search}
