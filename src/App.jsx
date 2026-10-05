@@ -4,14 +4,17 @@ import Navbar from "./components/navbar/NavBar";
 import UserPage from "./pages/UserPage";
 import UserList from "./pages/UserList";
 import ServerUsers from "./pages/ServerUsers";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
+  
   return (
     <>
       <BrowserRouter>
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="user-page" element={<UserPage />} />
           <Route path="user-list" element={<UserList />} />
           <Route path="server-user-list" element={<ServerUsers />} />

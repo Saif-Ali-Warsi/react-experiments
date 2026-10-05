@@ -5,7 +5,7 @@ function Dashboard({propDrillData}) {
     <>
       <h4>Dashoard !!</h4>
 
-      <SideBar propDrillData={propDrillData}></SideBar>
+      {/* <SideBar propDrillData={propDrillData}></SideBar> */}
     </>
   );
 }
