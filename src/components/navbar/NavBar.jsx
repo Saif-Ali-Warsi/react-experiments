@@ -9,7 +9,10 @@ function Navbar() {
           Dashboard
         </Link>
         <Link to="/user-page" className="link">
-          User 
+          User
+        </Link>
+        <Link to="/user-list" className="link">
+          User List
         </Link>
       </nav>
     </>
