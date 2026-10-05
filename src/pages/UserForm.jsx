@@ -3,6 +3,7 @@ import InputBox from "../components/input-box/input-box";
 import SolidButton from "../components/solid-button/solid-button";
 import SelectBox from "../components/select/Select-box";
 import CheckBox from "../components/checkbox/CheckBox";
+import CustomInput from "../components/custom-input/CustomInput";
 
 function UserForm({ onUserSubmit }) {
   const [formData, setFormData] = useState({
@@ -58,6 +59,19 @@ function UserForm({ onUserSubmit }) {
   return (
     <>
       <h1>User Form</h1>
+
+      <CustomInput
+        type="text"
+        placeholder="Custom Text Input"
+        ref={inputRef}
+      ></CustomInput>
+
+         <SolidButton
+        onClick={focusInput}
+        type="button"
+        text="Focus User Field"
+      ></SolidButton>
+
       <form onSubmit={submitUserForm}>
         <CheckBox
           label="Active"
@@ -110,13 +124,9 @@ function UserForm({ onUserSubmit }) {
 
         <SolidButton type="submit" text="SUBMIT"></SolidButton>
       </form>
-      <input ref={inputRef}></input>
+      {/* <input ref={inputRef}></input> */}
 
-      <SolidButton
-        onClick={focusInput}
-        type="button"
-        text="Focus User Field"
-      ></SolidButton>
+   
     </>
   );
 }

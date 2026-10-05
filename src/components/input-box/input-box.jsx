@@ -5,7 +5,6 @@ function InputBox({
   onChange,
   type = "text",
   placeholder = "Enter Information",
-  inputRef
 }) {
   return (
     <>
@@ -16,8 +15,7 @@ function InputBox({
           onChange={onChange}
           placeholder={placeholder}
           className="input-box"
-          inputRef={inputRef}
-        ></input>
+        />
       </div>
     </>
   );
