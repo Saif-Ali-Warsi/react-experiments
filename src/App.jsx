@@ -1,44 +1,18 @@
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Navbar from "./components/navbar/NavBar";
 import UserPage from "./pages/UserPage";
-import UserForm from "./pages/UserForm";
-import UserList from "./pages/UserList";
-import ServerUsers from "./pages/ServerUsers";
-import ProductList from "./pages/ProductList";
-import { MsgContext } from "./contexts/MsgContext";
-import Dashboard from "./pages/Dashboard";
-import Profile from "./pages/Profile";
-import SideBar from "./pages/SideBar";
 
 function App() {
-  const [userData, setUserData] = useState(null);
-
-  const propDrillData = { title: "prop drilling data" };
-
-  const ImpMsg = {
-    title: "React Experiments from context",
-  };
-
   return (
     <>
-      <div className="d-flex">
-        <div className="left-section">
-          <Dashboard propDrillData={propDrillData}></Dashboard>
-
-          <MsgContext.Provider value={ImpMsg}>
-            <ProductList />
-          </MsgContext.Provider>
-
-          <UserForm onUserSubmit={setUserData} />
-
-          <ServerUsers />
-
-          <UserList />
-        </div>
-
-        <div className="right-section">
-          <UserPage user={userData} />
-        </div>
-      </div>
+      <BrowserRouter>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="user-page" element={<UserPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
