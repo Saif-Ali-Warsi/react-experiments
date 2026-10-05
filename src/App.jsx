@@ -14,7 +14,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="user-page" element={<UserPage />} />
           <Route path="user-list" element={<UserList />} />
-          <Route />
+          <Route path="server-user-list" element={<ServerUsers />} />
         </Routes>
       </BrowserRouter>
     </>

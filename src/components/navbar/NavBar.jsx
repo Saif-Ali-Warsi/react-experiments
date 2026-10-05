@@ -14,6 +14,9 @@ function Navbar() {
         <Link to="/user-list" className="link">
           User List
         </Link>
+        <Link to="/server-user-list" className="link">
+          Server User List
+        </Link>
       </nav>
     </>
   );
