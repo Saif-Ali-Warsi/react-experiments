@@ -5,10 +5,14 @@ import UserList from "./pages/UserList";
 import ServerUsers from "./pages/ServerUsers";
 import ProductList from "./pages/ProductList";
 import { MsgContext } from "./contexts/MsgContext";
-
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
+import SideBar from "./pages/SideBar";
 
 function App() {
   const [userData, setUserData] = useState(null);
+
+  const propDrillData = { title: "prop drilling data" };
 
   const ImpMsg = {
     title: "React Experiments from context",
@@ -18,6 +22,8 @@ function App() {
     <>
       <div className="d-flex">
         <div className="left-section">
+          <Dashboard propDrillData={propDrillData}></Dashboard>
+
           <MsgContext.Provider value={ImpMsg}>
             <ProductList />
           </MsgContext.Provider>

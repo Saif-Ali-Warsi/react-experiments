@@ -10,6 +10,7 @@ const CustomInput = forwardRef(function CustomInput(
         <input
           className="input-box"
           value={value}
+          type={type}
           onChange={onChange}
           placeholder={placeholder}
           ref={ref}
