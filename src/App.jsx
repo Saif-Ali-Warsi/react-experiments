@@ -7,6 +7,7 @@ import ServerUsers from "./pages/ServerUsers";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
+import Posts from "./pages/Posts";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
 
           <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="posts" element={<Posts />} />
             <Route path="profile" element={<Profile />} />
             <Route path="settings" element={<Settings />} />
           </Route>

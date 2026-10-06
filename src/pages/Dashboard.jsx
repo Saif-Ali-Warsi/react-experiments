@@ -7,6 +7,7 @@ function Dashboard({ propDrillData }) {
       <h4>Dashoard !!</h4>
       <nav>
         <Link to="profile">Profile</Link>
+        <Link to="posts">Posts</Link>
         <Link to="settings">Settings</Link>
       </nav>
 
