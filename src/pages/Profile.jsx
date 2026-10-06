@@ -3,7 +3,7 @@ function Profile({propDrillData}) {
     <>
       <h4>Profile</h4>
 
-      <p>{propDrillData.title}</p>
+      {/* <p>{propDrillData.title}</p> */}
 
     </>
   );
