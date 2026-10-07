@@ -1,11 +1,14 @@
 import useFetch from "../hooks/useFetch";
 
 function PostsWithHook() {
+
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const {
     data: posts,
     loading,
     error,
-  } = useFetch("https://jsonplaceholder.typicode.com/posts");
+  } = useFetch(`${API_URL}/posts`);
 
   if (loading) {
     return (
