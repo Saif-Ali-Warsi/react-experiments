@@ -10,6 +10,7 @@ import Settings from "./pages/Settings";
 import Posts from "./pages/Posts";
 import PostsWithHook from "./pages/PostsWithHook";
 import YupForm from "./pages/YupForm";
+import DefaultValuesForm from "./pages/DefaultValuesForm";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="settings" element={<Settings />} />
             <Route path="posts-with-hook" element={<PostsWithHook />} />
             <Route path="yup-form" element={<YupForm />} />
+            <Route path="default-values" element={<DefaultValuesForm />} />
           </Route>
 
           <Route path="user-page" element={<UserPage />} />

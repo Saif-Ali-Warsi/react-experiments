@@ -11,6 +11,7 @@ function Dashboard({ propDrillData }) {
         <Link to="posts-with-hook" className="link">Posts with Hooks</Link>
         <Link to="yup-form" className="link">Go to Yup Form</Link>
         <Link to="settings" className="link">Settings</Link>
+        <Link to="default-values" className="link">Default Values Form</Link>
       </nav>
 
       <Outlet />
