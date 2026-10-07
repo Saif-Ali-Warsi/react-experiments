@@ -11,6 +11,7 @@ import Posts from "./pages/Posts";
 import PostsWithHook from "./pages/PostsWithHook";
 import YupForm from "./pages/YupForm";
 import DefaultValuesForm from "./pages/DefaultValuesForm";
+import DynamicFields from "./pages/DynamicFields";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="posts-with-hook" element={<PostsWithHook />} />
             <Route path="yup-form" element={<YupForm />} />
             <Route path="default-values" element={<DefaultValuesForm />} />
+            <Route path="dynamic-fields" element={<DynamicFields />} />
           </Route>
 
           <Route path="user-page" element={<UserPage />} />

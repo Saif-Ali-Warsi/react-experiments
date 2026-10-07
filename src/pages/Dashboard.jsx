@@ -6,12 +6,27 @@ function Dashboard({ propDrillData }) {
     <>
       <h4>Dashoard !!</h4>
       <nav>
-        <Link to="profile" className="link">Profile</Link>
-        <Link to="posts" className="link">Posts</Link>
-        <Link to="posts-with-hook" className="link">Posts with Hooks</Link>
-        <Link to="yup-form" className="link">Go to Yup Form</Link>
-        <Link to="settings" className="link">Settings</Link>
-        <Link to="default-values" className="link">Default Values Form</Link>
+        <Link to="profile" className="link">
+          Profile
+        </Link>
+        <Link to="posts" className="link">
+          Posts
+        </Link>
+        <Link to="posts-with-hook" className="link">
+          Posts with Hooks
+        </Link>
+        <Link to="yup-form" className="link">
+          Go to Yup Form
+        </Link>
+        <Link to="settings" className="link">
+          Settings
+        </Link>
+        <Link to="default-values" className="link">
+          Default Values Form
+        </Link>
+        <Link to="dynamic-fields" className="link">
+          Dynamic Fields Form
+        </Link>
       </nav>
 
       <Outlet />

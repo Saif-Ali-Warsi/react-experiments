@@ -3,41 +3,28 @@
 }
 
 .input-box {
-  /* Dimensions & Layout */
-  width: 100%;
   max-width: 320px;
   padding: 12px 16px;
   font-size: 15px;
-
-  /* Dark Theme Colors */
   background-color: #1a1b1e;
   color: #f1f3f5;
-
-  /* Borders & Radius */
   border: 1px solid #caceda;
   border-radius: 8px;
   outline: none;
-
-  /* Depth & Shadows */
   box-shadow:
     inset 2px 2px 5px rgba(0, 0, 0, 0.4),
     inset -2px -2px 5px rgba(255, 255, 255, 0.03);
-
-  /* Transitions */
   transition: all 0.3s ease;
 }
 
-/* Placeholder Styling */
 .input-box::placeholder {
   color: #5c6370;
 }
 
-/* Hover State */
 .input-box:hover {
   border-color: #3b4252;
 }
 
-/* Focus State (Glowing Accent) */
 .input-box:focus {
   border-color: #528bff;
   background-color: #141517;
