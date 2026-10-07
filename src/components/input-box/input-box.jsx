@@ -1,11 +1,10 @@
+import { forwardRef } from "react";
 import "../input-box/input-box.css";
 
-function InputBox({
-  value,
-  onChange,
-  type = "text",
-  placeholder = "Enter Information",
-}) {
+const InputBox = forwardRef(function InputBox(
+  { value, onChange, type = "text", placeholder = "Enter Information", ...rest },
+  ref,
+) {
   return (
     <>
       <div className="input-box-container">
@@ -15,10 +14,12 @@ function InputBox({
           onChange={onChange}
           placeholder={placeholder}
           className="input-box"
+          ref={ref}
+          {...rest}
         />
       </div>
     </>
   );
-}
+});
 
 export default InputBox;

@@ -9,6 +9,7 @@ import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Posts from "./pages/Posts";
 import PostsWithHook from "./pages/PostsWithHook";
+import YupForm from "./pages/YupForm";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="profile" element={<Profile />} />
             <Route path="settings" element={<Settings />} />
             <Route path="posts-with-hook" element={<PostsWithHook />} />
+            <Route path="yup-form" element={<YupForm />} />
           </Route>
 
           <Route path="user-page" element={<UserPage />} />

@@ -6,10 +6,11 @@ function Dashboard({ propDrillData }) {
     <>
       <h4>Dashoard !!</h4>
       <nav>
-        <Link to="profile">Profile</Link>
-        <Link to="posts">Posts</Link>
-        <Link to="posts-with-hook">Posts with Hooks</Link>
-        <Link to="settings">Settings</Link>
+        <Link to="profile" className="link">Profile</Link>
+        <Link to="posts" className="link">Posts</Link>
+        <Link to="posts-with-hook" className="link">Posts with Hooks</Link>
+        <Link to="yup-form" className="link">Go to Yup Form</Link>
+        <Link to="settings" className="link">Settings</Link>
       </nav>
 
       <Outlet />
