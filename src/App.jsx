@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Posts from "./pages/Posts";
+import PostsWithHook from "./pages/PostsWithHook";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="posts" element={<Posts />} />
             <Route path="profile" element={<Profile />} />
             <Route path="settings" element={<Settings />} />
+            <Route path="posts-with-hook" element={<PostsWithHook />} />
           </Route>
 
           <Route path="user-page" element={<UserPage />} />
