@@ -42,6 +42,7 @@ function DefaultValuesForm() {
 
         <SolidButton text="Submit"></SolidButton>
         <SolidButton
+        type="button"
           onClick={handleResetForm}
           text={"Reset Form"}
         ></SolidButton>
